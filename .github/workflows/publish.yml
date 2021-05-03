@@ -35,7 +35,7 @@ jobs:
             --entrypoint "/src/entrypoint.sh" \
             klakegg/hugo:0.82.1-ext-alpine \
             publish
-        working-directory:  gatling-io-doc
+        working-directory: gatling-io-doc
 
       - name: Checkout deploy project
         env:
