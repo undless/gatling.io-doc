@@ -191,9 +191,9 @@ prepare () {
     #                                                                                                        # version  # latest
     hugo_structure_version  "frontline-doc"       "development"          "content"           "enterprise/self-hosted"   "1.14"     true
     hugo_structure_version  "frontline-doc"       "development"          "content"           "enterprise/self-hosted"   "1.13"
-    hugo_structure_version  "gatling"             "misc-96-doc-hugo"     "src/docs/content"  "oss"           "3.6"      true
-    hugo_structure_version  "gatling"             "misc-96-doc-hugo-3.4" "src/docs/content"  "oss"           "3.4"
-    hugo_structure_version  "gatling"             "misc-96-doc-hugo-3.3" "src/docs/content"  "oss"           "3.3"
+    hugo_structure_version  "gatling"             "misc-96-doc-hugo"     "src/docs/content"  "gatling"           "3.6"      true
+    hugo_structure_version  "gatling"             "misc-96-doc-hugo-3.4" "src/docs/content"  "gatling"           "3.4"
+    hugo_structure_version  "gatling"             "misc-96-doc-hugo-3.3" "src/docs/content"  "gatling"           "3.3"
 
     cp template/search.md content/search.md
 

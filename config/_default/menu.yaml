@@ -1,6 +1,6 @@
 main:
-  - name: OSS
-    url: /oss/
+  - name: Gatling
+    url: /gatling/
     weight: 10
   - name: Self Hosted
     url: /enterprise/self-hosted
