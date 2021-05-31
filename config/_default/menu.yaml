@@ -1,13 +1,15 @@
 main:
   - name: Gatling
-    url: /gatling/
+    identifier: gatling
+    url: gatling/
     weight: 10
-  - name: Self Hosted
-    url: /enterprise/self-hosted
+  - name: Self-Hosted
+    identifier: self-hosted
+    url: enterprise/self-hosted
     weight: 20
   - name: Cloud
     identifier: cloud
-    url: /enterprise/cloud/
+    url: enterprise/cloud/
     weight: 30
 
 social:

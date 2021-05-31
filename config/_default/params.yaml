@@ -12,6 +12,12 @@ facebookAuthor: "GatlingTool"
 facebookPublisher: "GatlingTool"
 ogLocale: "en_US"
 
+# Header
+
+logos:
+  white: "/images/logo-gatling.svg"
+  black: "/images/logo-gatling-noir.svg"
+
 ## JSON-LD
 schemaName: "Gatling Corp"
 schemaLogo: "gatling-logo.png"
@@ -32,8 +38,6 @@ bgColor: "#fff"
 landscapePhotoWidths: [900, 800, 700, 600, 500]
 portraitPhotoWidths: [800, 700, 600, 500]
 lqipWidth: "20x"
-
-# Footer
 
 # Alert
 alert: false
