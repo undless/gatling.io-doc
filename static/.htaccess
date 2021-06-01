@@ -31,6 +31,14 @@ RewriteCond %{REQUEST_URI} !(.*)/$
 RewriteRule ^(current|[0-9.]+)/migration_guides/(.*)$ /docs/gatling/reference/$1/migration/$2/ [L,R=301]
 RewriteRule ^(current|[0-9.]+)/migration_guides/(.*)$ /docs/gatling/reference/$1/migration/$2 [L,R=301]
 
+## 301 /docs/frontline and PDFs
+RewriteRule ^frontline/?$ /docs/enterprise/self-hosted/ [L,R=301]
+RewriteRule ^frontline/FrontLine-Release-Notes.pdf$ /docs/enterprise/self-hosted/reference/current/release/release-notes/ [L,R=301]
+RewriteRule ^frontline/FrontLine-([0-9-]+)-Highlights.pdf$ /docs/enterprise/self-hosted/reference/current/release/highlight-$1/ [L,R=301]
+RewriteRule ^frontline/FrontLine-Installation-Guide.pdf$ /docs/enterprise/self-hosted/reference/current/installation/ [L,R=301]
+RewriteRule ^frontline/FrontLine-User-Guide.pdf$ /docs/enterprise/self-hosted/reference/current/user/ [L,R=301]
+RewriteRule ^frontline/FrontLine-Plugins-Guide.pdf$ /docs/enterprise/self-hosted/reference/current/plugins/ [L,R=301]
+
 ## Everything else
 RewriteRule ^(current|[0-9.]+)/?$ /docs/gatling/reference/$1/ [L,R=301]
 RewriteCond %{REQUEST_URI} !(.*)/$
