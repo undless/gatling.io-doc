@@ -53,6 +53,8 @@ markup:
     style: monokailight
     tabWidth: 2
 
+pygmentsUseClasses: true
+
 minify:
   tdewolff:
     html:
