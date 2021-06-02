@@ -193,14 +193,15 @@ prepare () {
   
     mkdir ./content || true
 
-    #                       # repository          # branch               # remote            # local
-    hugo_structure          "frontline-cloud-doc" "development"          "content"           "enterprise/cloud"
-    #                                                                                                        # version  # latest
-    hugo_structure_version  "frontline-doc"       "development"          "content"           "enterprise/self-hosted"   "1.14"     true
-    hugo_structure_version  "frontline-doc"       "development"          "content"           "enterprise/self-hosted"   "1.13"
-    hugo_structure_version  "gatling"             "misc-96-doc-hugo"     "src/docs/content"  "gatling"           "3.6"      true
-    hugo_structure_version  "gatling"             "misc-96-doc-hugo-3.4" "src/docs/content"  "gatling"           "3.4"
-    hugo_structure_version  "gatling"             "misc-96-doc-hugo-3.3" "src/docs/content"  "gatling"           "3.3"
+    #                       # repository           # branch  # remote            # local
+    hugo_structure          "frontline-cloud-doc"  "main"    "content"           "enterprise/cloud"
+    #                                                                                                      # version  # latest
+    hugo_structure_version  "frontline-doc"        "main"    "content"           "enterprise/self-hosted"  "1.14"     true
+    hugo_structure_version  "frontline-doc"        "1.13"    "content"           "enterprise/self-hosted"  "1.13"
+    hugo_structure_version  "gatling"              "main"    "src/docs/content"  "gatling"                 "3.6"      true
+    hugo_structure_version  "gatling"              "3.5"     "src/docs/content"  "gatling"                 "3.5"
+    hugo_structure_version  "gatling"              "3.4"     "src/docs/content"  "gatling"                 "3.4"
+    hugo_structure_version  "gatling"              "3.3"     "src/docs/content"  "gatling"                 "3.3"
 
     cp template/search.md content/search.md
 
