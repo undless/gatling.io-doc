@@ -22,7 +22,7 @@ EOF
 # Default values for parameters
 
 PORT=1313
-ENVIRONMENT=development
+ENVIRONMENT=production
 COMMAND="server"
 WITHDRAFTS=2
 BASEURL=""
