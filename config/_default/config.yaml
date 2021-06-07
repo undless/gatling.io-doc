@@ -2,6 +2,7 @@ baseurl: /docs
 
 theme: "github.com/gatling/gatling.io-doc-theme"
 
+disableKinds: ["404"]
 disableHugoGeneratorInject: true
 enableEmoji: true
 enableGitInfo: false
