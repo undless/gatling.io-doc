@@ -5,7 +5,7 @@ main:
     weight: 10
   - name: Self-Hosted
     identifier: self-hosted
-    url: enterprise/self-hosted
+    url: enterprise/self-hosted/
     weight: 20
   - name: Cloud
     identifier: cloud
