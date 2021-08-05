@@ -30,7 +30,7 @@ jobs:
             --workdir "/src" \
             --entrypoint "/src/bin/entrypoint.sh" \
             --env DOCKER=true \
-            klakegg/hugo:0.85.0-ext-alpine \
+            klakegg/hugo:0.87.0-ext-alpine \
             publish
           tar czvf gatlingio.tgz public/
 
