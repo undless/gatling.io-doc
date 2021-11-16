@@ -1,6 +1,6 @@
 const FlexSearch = require("flexsearch");
-const fs = require('fs');
-const _ = require('lodash');
+const fs = require("fs");
+const _ = require("lodash");
 
 // IMPORTANT: Has to be the same as theme configuration (e.g: assets/js/index.ts), but not async
 const indexOptions = {
@@ -9,35 +9,20 @@ const indexOptions = {
   encode: "extra",
   tokenize: "strict",
   doc: {
-    id: 'id',
-    field: [
-      'title',
-      'description',
-      'content',
-      'section',
-      'version',
-      'latest'
-    ],
-    // @ts-ignore https://github.com/nextapps-de/flexsearch/issues/152
-    store: [
-      'title',
-      'description',
-      'href',
-      'section',
-      'version',
-      'latest'
-    ]
+    id: "id",
+    field: ["title", "description", "content", "section", "version", "latest"],
+    store: ["title", "description", "href", "section", "version", "latest"],
   },
-}
+};
 
-const index = FlexSearch.create(indexOptions)
+const index = FlexSearch.create(indexOptions);
 
 const handleError = (message, error) => {
   if (error) {
     console.error(message, error);
     process.exit(1);
   }
-}
+};
 
 const [path, encoding] = process.argv.slice(2);
 
@@ -48,10 +33,10 @@ fs.readFile(path, encoding, (error, data) => {
 
   const compiledSearch = {
     exported: true,
-    indexes: index.export({ serialize: false })
-  }
+    indexes: index.export({ serialize: false }),
+  };
 
   fs.writeFile(path, JSON.stringify(compiledSearch), (error) => {
-    handleError("Error while exporting indexes", error)
+    handleError("Error while exporting indexes", error);
   });
 });
