@@ -52,7 +52,7 @@ options:
   breadCrumb: false
 
 includeCode:
-  default: scala
+  default: java
   labels:
     java: Java
     kt: Kotlin
