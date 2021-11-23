@@ -54,6 +54,7 @@ markup:
     style: monokailight
     tabWidth: 2
 
+pygmentsCodeFences: true
 pygmentsUseClasses: true
 
 minify:
