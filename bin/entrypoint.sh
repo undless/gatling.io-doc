@@ -71,8 +71,8 @@ build_indexes() {
   unversioned_section_index="content/$local_dir/_index.md"
   unversioned_section_index_temp=$(mktemp)
 
-  REPOSITORY="$repo" BRANCH="$branch" REMOTE_DIR="$remote_dir" LOCAL_DIR="$local_dir" \
-    envsubst '${REPOSITORY} ${BRANCH} ${REMOTE_DIR} ${LOCAL_DIR}' < "template/indexes/unversioned-section-index.md" > "$unversioned_section_index_temp"
+  REPOSITORY="$repo" BRANCH="$branch" REMOTE_DIR="$remote_dir" LOCAL_DIR="$local_dir" SECTION_TYPE="$section_type" \
+    envsubst '${REPOSITORY} ${BRANCH} ${REMOTE_DIR} ${LOCAL_DIR} ${SECTION_TYPE}' < "template/indexes/unversioned-section-index.md" > "$unversioned_section_index_temp"
   merge_and_delete_temp "$unversioned_section_index_temp" "$unversioned_section_index"
 }
 
@@ -97,8 +97,8 @@ build_indexes_version() {
 
   if [[ -n $latest ]]; then
     unversioned_section_index_temp=$(mktemp)
-    REPOSITORY="$repo" BRANCH="$branch" REMOTE_DIR="$remote_dir" LOCAL_DIR="$local_dir" \
-      envsubst '${REPOSITORY} ${BRANCH} ${REMOTE_DIR} ${LOCAL_DIR}' < "template/indexes/unversioned-section-index.md" > "$unversioned_section_index_temp"
+    REPOSITORY="$repo" BRANCH="$branch" REMOTE_DIR="$remote_dir" LOCAL_DIR="$local_dir" SECTION_TYPE="$section_type" \
+      envsubst '${REPOSITORY} ${BRANCH} ${REMOTE_DIR} ${LOCAL_DIR} ${SECTION_TYPE}' < "template/indexes/unversioned-section-index.md" > "$unversioned_section_index_temp"
     merge_and_delete_temp $unversioned_section_index_temp "content/$local_dir/_index.md"
 
     cp "content/$local_dir/reference/$version/_index.md" "content/$local_dir/reference/current/_index.md"
@@ -130,6 +130,7 @@ hugo_structure() {
   local branch="$2"
   local remote_dir="$3"
   local local_dir="$4"
+  local section_type="$5"
 
   fetch_doc "$repo" "$branch" "$remote_dir" "content/$local_dir"
   drop_search_index $local_dir
@@ -141,8 +142,9 @@ hugo_structure_version() {
   local branch="$2"
   local remote_dir="$3"
   local local_dir="$4"
-  local version="$5"
-  local latest="$6"
+  local section_type="$5"
+  local version="$6"
+  local latest="$7"
 
   if [[ -n $latest ]]; then
     fetch_doc "$repo" "$branch" "$remote_dir" "content/$local_dir"
@@ -185,18 +187,18 @@ prepare () {
   
     mkdir ./content || true
 
-    #                       # repository           # branch  # remote            # local
-    hugo_structure          "frontline-cloud-doc"  "main"    "content"           "enterprise/cloud"
-    #                                                                                                      # version  # latest
-    hugo_structure_version  "frontline-doc"        "main"    "content"           "enterprise/self-hosted"  "1.16"     true
-    hugo_structure_version  "frontline-doc"        "1.15"    "content"           "enterprise/self-hosted"  "1.15"
-    hugo_structure_version  "frontline-doc"        "1.14"    "content"           "enterprise/self-hosted"  "1.14"
-    hugo_structure_version  "frontline-doc"        "1.13"    "content"           "enterprise/self-hosted"  "1.13"
-    hugo_structure_version  "gatling"              "3.7"     "src/docs/content"  "gatling"                 "3.7"      true
-    hugo_structure_version  "gatling"              "3.6"     "src/docs/content"  "gatling"                 "3.6"
-    hugo_structure_version  "gatling"              "3.5"     "src/docs/content"  "gatling"                 "3.5"
-    hugo_structure_version  "gatling"              "3.4"     "src/docs/content"  "gatling"                 "3.4"
-    hugo_structure_version  "gatling"              "3.3"     "src/docs/content"  "gatling"                 "3.3"
+    #                       # repository           # branch  # remote            # local                   # section
+    hugo_structure          "frontline-cloud-doc"  "main"    "content"           "enterprise/cloud"        "cloud"
+    #                                                                                                                     # version  # latest
+    hugo_structure_version  "frontline-doc"        "main"    "content"           "enterprise/self-hosted"  "self-hosted"  "1.16"     true
+    hugo_structure_version  "frontline-doc"        "1.15"    "content"           "enterprise/self-hosted"  "self-hosted"  "1.15"
+    hugo_structure_version  "frontline-doc"        "1.14"    "content"           "enterprise/self-hosted"  "self-hosted"  "1.14"
+    hugo_structure_version  "frontline-doc"        "1.13"    "content"           "enterprise/self-hosted"  "self-hosted"  "1.13"
+    hugo_structure_version  "gatling"              "3.7"     "src/docs/content"  "gatling"                 "gatling"      "3.7"      true
+    hugo_structure_version  "gatling"              "3.6"     "src/docs/content"  "gatling"                 "gatling"      "3.6"
+    hugo_structure_version  "gatling"              "3.5"     "src/docs/content"  "gatling"                 "gatling"      "3.5"
+    hugo_structure_version  "gatling"              "3.4"     "src/docs/content"  "gatling"                 "gatling"      "3.4"
+    hugo_structure_version  "gatling"              "3.3"     "src/docs/content"  "gatling"                 "gatling"      "3.3"
 
     cp template/search.md content/search.md
 
