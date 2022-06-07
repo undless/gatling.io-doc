@@ -2,7 +2,9 @@ baseurl: https://gatling.io/docs
 
 theme: "github.com/gatling/gatling.io-doc-theme"
 
-disableKinds: ["404"]
+disableKinds:
+  - "404"
+  - "taxonomyTerm"
 disableHugoGeneratorInject: true
 enableEmoji: true
 enableGitInfo: false
@@ -14,10 +16,8 @@ rssLimit: 10
 outputs:
   home:
     - HTML
-    - RSS
   section:
     - HTML
-    - RSS
     - SITEMAP
 
 outputFormats:
