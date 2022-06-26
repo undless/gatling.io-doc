@@ -102,6 +102,7 @@ build_indexes_version() {
     merge_and_delete_temp $unversioned_section_index_temp "content/$local_dir/_index.md"
 
     cp "content/$local_dir/reference/$version/_index.md" "content/$local_dir/reference/current/_index.md"
+    sed -i '/sitemap_exclude/d' "content/$local_dir/reference/current/_index.md"
   fi
 }
 
