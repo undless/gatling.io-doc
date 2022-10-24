@@ -10,33 +10,53 @@ on:
     branches:
       - main
 
+permissions:
+  actions: write
+  contents: read
+  id-token: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 60 # way to much, but can timeout nonetheless
+    timeout-minutes: 10 # way to much, but can timeout nonetheless
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.8.0
+        uses: styfle/cancel-workflow-action@0.11.0
         with:
           access_token: ${{ github.token }}
 
       - name: Checkout current project
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.104.3'
+          extended: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Generate site
-        run: |
-          docker run \
-            --volume "$(pwd)":/src \
-            --workdir "/src" \
-            --entrypoint "/src/bin/entrypoint.sh" \
-            --env DOCKER=true \
-            klakegg/hugo:0.87.0-ext-alpine \
-            publish
-          tar czvf gatlingio.tgz public/
+        run: ./bin/entrypoint.sh generate
 
-      - name: Upload archive
-        uses: actions/upload-artifact@v2
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          name: gatlingio-${{ github.workflow }}-${{ github.run_number }}
-          path: gatlingio.tgz
-          retention-days: 1
+          aws-region: eu-west-3
+          role-to-assume: ${{ secrets.AWS_ROLE_PROD_DOC }}
+
+      - name: Publish
+        run: |
+          sed -i 's/HUGO_DEPLOYMENT_BUCKET/${{ secrets.HUGO_DEPLOYMENT_BUCKET }}/' config/production/config.yaml
+          hugo deploy
