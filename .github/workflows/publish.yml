@@ -16,9 +16,9 @@ permissions:
   id-token: write
 
 jobs:
-  publish:
+  deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 10 # way to much, but can timeout nonetheless
+    timeout-minutes: 10
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -56,7 +56,26 @@ jobs:
           aws-region: eu-west-3
           role-to-assume: ${{ secrets.AWS_ROLE_PROD_DOC }}
 
-      - name: Publish
+      - name: Deploy
         run: |
           sed -i 's/HUGO_DEPLOYMENT_BUCKET/${{ secrets.HUGO_DEPLOYMENT_BUCKET }}/' config/production/config.yaml
           hugo deploy
+
+  publish:
+    needs: deploy
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+      url: https://gatling.io/docs
+    timeout-minutes: 10
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: eu-west-3
+          role-to-assume: ${{ secrets.AWS_ROLE_PROD_DOC }}
+
+      - name: Publish
+        run: |
+          aws ssm start-associations-once --association-id "${{ secrets.AWS_SSM_ASSOCIATION_MEP_WEBSITE_DOC_PROD }}"
