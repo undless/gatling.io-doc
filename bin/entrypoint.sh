@@ -198,7 +198,7 @@ prepare () {
     hugo_structure_version  "frontline-doc"        "1.15"    "content"           "enterprise/self-hosted"  "self-hosted"  "1.15"
     hugo_structure_version  "frontline-doc"        "1.14"    "content"           "enterprise/self-hosted"  "self-hosted"  "1.14"
     hugo_structure_version  "frontline-doc"        "1.13"    "content"           "enterprise/self-hosted"  "self-hosted"  "1.13"
-    hugo_structure_version  "gatling"              "main"    "src/docs/content"  "gatling"                 "gatling"      "3.9"      true
+    hugo_structure_version  "gatling"              "3.9"     "src/docs/content"  "gatling"                 "gatling"      "3.9"      true
     hugo_structure_version  "gatling"              "3.8"     "src/docs/content"  "gatling"                 "gatling"      "3.8"
     hugo_structure_version  "gatling"              "3.7"     "src/docs/content"  "gatling"                 "gatling"      "3.7"
     hugo_structure_version  "gatling"              "3.6"     "src/docs/content"  "gatling"                 "gatling"      "3.6"
