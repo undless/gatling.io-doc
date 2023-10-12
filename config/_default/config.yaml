@@ -4,7 +4,7 @@ theme: "github.com/gatling/gatling.io-doc-theme"
 
 disableKinds:
   - "404"
-  - "taxonomyTerm"
+  - "taxonomy"
 disableHugoGeneratorInject: true
 enableEmoji: true
 enableGitInfo: false
