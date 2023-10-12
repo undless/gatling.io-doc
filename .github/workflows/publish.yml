@@ -25,12 +25,12 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout current project
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.104.3'
+          hugo-version: '0.119.0'
           extended: true
 
       - name: Setup Node
@@ -50,7 +50,7 @@ jobs:
         run: ./bin/entrypoint.sh generate
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: eu-west-3
           role-to-assume: ${{ secrets.AWS_ROLE_PROD_DOC }}
@@ -70,7 +70,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: eu-west-3
           role-to-assume: ${{ secrets.AWS_ROLE_PROD_DOC }}
