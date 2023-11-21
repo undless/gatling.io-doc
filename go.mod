@@ -1,5 +1,5 @@
 module github.com/gatling/gatling.io-doc
 
-go 1.18
+go 1.21
 
-require github.com/gatling/gatling.io-doc-theme v0.0.0-20220531153637-b6b7101ce4e9 // indirect
+require github.com/gatling/gatling.io-doc-theme v0.0.0-20231120163357-2bf3be01f70c // indirect
