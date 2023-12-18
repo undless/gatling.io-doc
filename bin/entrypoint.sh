@@ -192,7 +192,8 @@ prepare () {
     #                       # repository           # branch  # remote            # local                   # section
     hugo_structure          "frontline-cloud-doc"  "main"    "content"           "enterprise/cloud"        "cloud"
     #                                                                                                                     # version  # latest
-    hugo_structure_version  "frontline-doc"        "main"    "content"           "enterprise/self-hosted"  "self-hosted"  "1.18"     true
+    hugo_structure_version  "frontline-doc"        "main"    "content"           "enterprise/self-hosted"  "self-hosted"  "1.19"     true
+    hugo_structure_version  "frontline-doc"        "1.18"    "content"           "enterprise/self-hosted"  "self-hosted"  "1.18"
     hugo_structure_version  "frontline-doc"        "1.17"    "content"           "enterprise/self-hosted"  "self-hosted"  "1.17"
     hugo_structure_version  "frontline-doc"        "1.16"    "content"           "enterprise/self-hosted"  "self-hosted"  "1.16"
     hugo_structure_version  "frontline-doc"        "1.15"    "content"           "enterprise/self-hosted"  "self-hosted"  "1.15"
