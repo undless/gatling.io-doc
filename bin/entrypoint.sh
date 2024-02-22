@@ -48,6 +48,7 @@ clean () {
     ./package-lock.json \
     ./go.sum \
     ./node_modules \
+    ./public \
     ./resources 
 }
 
