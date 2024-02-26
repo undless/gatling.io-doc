@@ -24,7 +24,7 @@ async function handler(event) {
   const uri = request.uri;
 
   let location = null;
-  if (uri.startsWith("/gatling") || uri.startsWith("/enterprise")) {
+  if (uri.startsWith("/current") || uri.startsWith("/gatling") || uri.startsWith("/enterprise")) {
     const key = "/" + uri.split("/").filter(str => !isEmpty(str)).join("/");
     try {
       location = await kvsHandle.get(key);
