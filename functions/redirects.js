@@ -3,7 +3,7 @@ import cf from "cloudfront";
 const kvsId = "kvsId"
 const kvsHandle = cf.kvs(kvsId);
 
-const extensions = [".css", ".html", ".ico", ".js", ".json", ".png", ".svg", ".txt", ".xml", ".webmanifest", ".woff", ".woff2"];
+const extensions = [".css", ".html", ".ico", ".js", ".json", ".png", ".svg", ".ttf", ".txt", ".xml", ".webmanifest", ".woff", ".woff2"];
 
 function hasKnownFileExtension(uri) {
   for (const index in extensions) {
