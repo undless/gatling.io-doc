@@ -1,4 +1,6 @@
-github.com/gatling/gatling.io-doc-theme v0.0.0-20240213145616-0a2a7d0074ee h1:6Jw8xHwlkk1uoGnVaIuhIDRpfmKroKDLfdv+OxDh+10=
-github.com/gatling/gatling.io-doc-theme v0.0.0-20240213145616-0a2a7d0074ee/go.mod h1:1Cdzj3kPUrXqWMJfCRFNQGDTv1S/fy2wP45JW3CDadA=
-github.com/gatling/gatling.io-doc-theme v0.0.0-20240222144031-95550e1f285d h1:u6Y9nL8Q0Jppa3NeoZs6SM47F3KFxAdzY5GXRIXuYPo=
-github.com/gatling/gatling.io-doc-theme v0.0.0-20240222144031-95550e1f285d/go.mod h1:1Cdzj3kPUrXqWMJfCRFNQGDTv1S/fy2wP45JW3CDadA=
+github.com/gatling/gatling.io-doc-theme v0.0.0-20240222160400-c0fb07866574 h1:Z/Cb6ggbYl46rCGX7QA0wDh9TjU7N3laLwfgwvZJ8Qo=
+github.com/gatling/gatling.io-doc-theme v0.0.0-20240222160400-c0fb07866574/go.mod h1:1Cdzj3kPUrXqWMJfCRFNQGDTv1S/fy2wP45JW3CDadA=
+github.com/gatling/gatling.io-doc-theme v0.0.0-20240227163300-f0955f3deb6d h1:iuZXmHU0JD4PM5/+lEBNK8D0pLuCOJyAISjsFyur1T0=
+github.com/gatling/gatling.io-doc-theme v0.0.0-20240227163300-f0955f3deb6d/go.mod h1:1Cdzj3kPUrXqWMJfCRFNQGDTv1S/fy2wP45JW3CDadA=
+github.com/gatling/gatling.io-doc-theme v0.0.0-20240227171152-eba6026b2f8c h1:j2LZPAZEjiNYSUAG577Dt9dlC+u/Gh9rj1Cl5ZlHEWU=
+github.com/gatling/gatling.io-doc-theme v0.0.0-20240227171152-eba6026b2f8c/go.mod h1:1Cdzj3kPUrXqWMJfCRFNQGDTv1S/fy2wP45JW3CDadA=
