@@ -701,11 +701,11 @@
       "value": "/reference/install/cloud/kubernetes/"
     },
     {
-      "key": "/enterprise/cloud/reference/admin/private_locations/kuberntes/installation",
+      "key": "/enterprise/cloud/reference/admin/private_locations/kubernetes/installation",
       "value": "/reference/install/cloud/kubernetes/installation/"
     },
     {
-      "key": "/enterprise/cloud/reference/admin/private_locations/kuberntes/configuration",
+      "key": "/enterprise/cloud/reference/admin/private_locations/kubernetes/configuration",
       "value": "/reference/install/cloud/kubernetes/configuration/"
     },
     {
