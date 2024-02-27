@@ -53,3 +53,8 @@ analytics:
   universalTrackingId: "UA-53375088-1"
   globalTrackingId: "G-B5J9F14X56"
   tagManagerTrackingId: "GTM-TRJ26ZX"
+
+docSearch:
+  appId: "6PCIB797P6"
+  apiKey: "0c6a745d8520dc13afd7958b1d48c59a"
+  indexName: "gatling"
