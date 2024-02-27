@@ -138,11 +138,6 @@ prepare () {
   fi
 }
 
-optimize() {
-  echo "=====> optimize phase"
-  node bin/optimize_search_index.js public/search/index.json utf8
-}
-
 POSITIONAL=()
 while [[ $# -gt 0 ]]
 do
@@ -206,7 +201,6 @@ case "$COMMAND" in
   generate)
     prepare
     hugo "${HUGO_OPTS[@]}"
-    optimize
     ;;
   clean)
     clean
