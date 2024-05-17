@@ -42,12 +42,13 @@ alertText: ""
 # Edit Page
 editPage: true
 
-includeCode:
+languages:
   default: java
   labels:
     java: Java
     kt: Kotlin
     scala: Scala
+    js: JavaScript
 
 analytics:
   universalTrackingId: "UA-53375088-1"
