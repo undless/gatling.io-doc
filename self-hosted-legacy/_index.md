@@ -4,12 +4,13 @@ description: Documentation for the Gatling and Gatling Enterprise load testing t
 date: 2021-04-20T18:30:56+02:00
 lastmod: 2021-04-20T18:30:56+02:00
 cascade:
-  docsRepo: https://github.com/gatling/gatling.io-doc/blob/main/self-hosted
+  docsRepo: https://github.com/gatling/gatling.io-doc/blob/main/self-hosted-legacy
 ordering:
   - install
   - execute
   - admin
   - stats
+  - integrations
   - release-notes
 ---
 
