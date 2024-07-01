@@ -4,10 +4,14 @@ title: Grafana Datasource for Gatling Enterprise
 description: Learn how to configure the Gatling Enterprise Grafana datasource to display your Gatling Enterprise simulation reports.
 lead: Display Gatling Enterprise simulation reports in Grafana.
 date: 2021-03-08T12:50:08+00:00
-lastmod: 2021-08-05T13:13:30+00:00
+lastmod: 2024-07-01T13:13:30+00:00
 ---
 
 ## Requirements
+
+{{< alert warning >}}
+The Grafana data source integration is deprecated and incompatible with Grafana 11 and above.
+{{< /alert >}}
 
 Download and install [Grafana](http://grafana.org/download/).
 
