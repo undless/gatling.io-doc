@@ -214,8 +214,7 @@ There are some requirements before creating a Kubernetes/OpenShift pool:
 Additionally, if Gatling Enterprise is deployed outside Kubernetes/OpenShift:
 
 * The Kubernetes API should be reachable by Gatling Enterprise.
-* If using the NodePort mode, firewall rules must be added so that Gatling Enterprise can reach Kubernetes nodes on the configured Kubernetes NodePort range (by default, 30000-32767).
-* If using the Ingress or Route modes, the Gatling Enterprise server will create ingress rules and connect to the injectors on port 9999 (HTTP).
+* As you're using Ingresses or Routes, the Gatling Enterprise server will create ingress rules and connect to the injectors on port 9999 (HTTP).
 
 {{< alert tip >}}
 If your cluster uses RBAC, you'll need a role with the following permissions for Gatling Enterprise's service account:
