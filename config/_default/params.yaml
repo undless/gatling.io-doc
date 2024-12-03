@@ -51,8 +51,7 @@ languages:
     - scala: Scala
 
 analytics:
-  universalTrackingId: "UA-53375088-1"
-  globalTrackingId: "G-B5J9F14X56"
+  globalTrackingId: "G-MX12C3G05Y"
   tagManagerTrackingId: "GTM-TRJ26ZX"
 
 docSearch:
