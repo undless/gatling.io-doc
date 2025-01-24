@@ -3,7 +3,7 @@ title: Gatling documentation
 description: Documentation for the Gatling and Gatling Enterprise load testing tools.
 date: 2021-04-20T18:30:56+02:00
 cascade:
-  docsRepo: https://github.com/gatling/gatling.io-doc/blob/main/src/docs/content
+  docsRepo: https://github.com/gatling/gatling.io-doc/blob/main/content
 ordering:
   - tutorials
   - reference
