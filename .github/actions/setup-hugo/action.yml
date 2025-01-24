@@ -1,0 +1,30 @@
+name: Setup Hugo
+description: Setup Hugo manually while waiting for peaceiris/actions-hugo to support deploy releases
+
+inputs:
+  hugo-version:
+    description: 'Version of Hugo to install'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install and setup Hugo
+      shell: bash
+      run: |
+        base_url="https://github.com/gohugoio/hugo/releases/download"
+
+        version="${{ inputs.hugo-version }}"
+        archive_url="${base_url}/v${version}/hugo_extended_withdeploy_${version}_linux-amd64.tar.gz"
+
+        workdir="$HOME/hugo"
+        bindir="$workdir/bin"
+        tmpdir="$workdir/tmp"
+
+        mkdir -p {"$bindir","$tmpdir"}
+
+        curl --fail --location --show-error --silent --output "$tmpdir/hugo.tar.gz" "$archive_url"
+        tar xvzf "$tmpdir/hugo.tar.gz" -C "$bindir"
+        rm -r "$tmpdir"
+
+        echo "$bindir" >> $GITHUB_PATH
