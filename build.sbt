@@ -27,9 +27,9 @@ Test / unmanagedSourceDirectories ++= (baseDirectory.value / "content" ** "code"
 
 // Dependencies
 
-val gatlingVersion = "3.13.3"
-val gatlingGrpcVersion = "3.13.3.1"
-val gatlingMqttVersion = "3.13.3"
+val gatlingVersion = "3.13.4"
+val gatlingGrpcVersion = "3.13.4"
+val gatlingMqttVersion = "3.13.4"
 
 libraryDependencies ++= Seq(
   // Gatling modules
