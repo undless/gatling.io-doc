@@ -1,12 +1,9 @@
 ---
-menutitle: Enterprise Plugin
-title: Enterprise Jenkins Plugin
+menutitle: Jenkins Plugin
+title: Jenkins Plugin
 seotitle: Jenkins Plugin for Gatling Enterprise
 description: Learn how to configure the Gatling Enterprise Jenkins plugin and run your simulations.
 lead: Run your Gatling Enterprise simulations from your Jenkins CI.
-badge:
-  type: enterprise
-  label: Enterprise
 aliases:
   - /reference/extensions/ci-cd/jenkins/enterprise
 date: 2021-03-08T12:50:14+00:00
