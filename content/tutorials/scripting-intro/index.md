@@ -206,4 +206,4 @@ When the test has finished, there is an HTML link in the terminal that you can u
 You have successfully run your first test! To keep learning, we recommend the following resources:
 
 - [Introduction to the Recorder]({{< ref "recorder" >}})
-- [Writing realistic tests]({{< ref "advanced" >}})
+- [Writing realistic tests]({{< ref "writing-realistic-tests" >}})
