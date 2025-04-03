@@ -10,7 +10,7 @@ aliases:
 In this tutorial, we assume that you have already gone through the
 introductory guides and that you have a basic understanding of how a simulation works.\
 We will build a realistic load test for a relevant real-world scenario and introduce more advanced concepts and
-[Domain Specific Language](https://en.wikipedia.org/wiki/Domain-specific_language) constructs.
+SDK constructs.
 
 {{< alert info >}}
 **Sample project prerequisites**  
