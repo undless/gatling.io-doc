@@ -57,7 +57,7 @@ class AdvancedTutorialSampleScala extends Simulation {
         ├── scala/
             ├── example/
                 ├── endpoints/
-                    ├── APIendpoints.scala
+                    ├── APIEndpoints.scala
                     └── WebEndpoints.scala
                 ├── groups/
                     ├── ScenarioGroups.scala
@@ -72,7 +72,7 @@ class AdvancedTutorialSampleScala extends Simulation {
 */
 //#project-structure
 
-object APIendpoints {
+object APIEndpoints {
 //#login-endpoint
 // Define login request
 // Reference: https://docs.gatling.io/reference/script/protocols/http/request/#forms

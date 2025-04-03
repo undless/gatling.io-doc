@@ -32,7 +32,7 @@
         ├── kotlin/
             ├── example/
                 ├── endpoints/
-                    ├── APIendpoints.kt
+                    ├── APIEndpoints.kt
                     └── WebEndpoints.kt
                 ├── groups/
                     ├── ScenarioGroups.kt

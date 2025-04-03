@@ -63,7 +63,7 @@ public class AdvancedTutorialSampleJava {
         ├── java/
             ├── example/
                 ├── endpoints/
-                    ├── APIendpoints.java
+                    ├── APIEndpoints.java
                     └── WebEndpoints.java
                 ├── groups/
                     ├── ScenarioGroups.java
