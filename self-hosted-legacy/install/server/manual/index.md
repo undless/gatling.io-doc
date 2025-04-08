@@ -421,9 +421,9 @@ ldap {
 * <1> Your TLS configuration for LDAP (you don't need this part if you use plain LDAP)
 * <2> Choose what will be the format of your trust store/key store. Can be either PEM or JKS
 * <3> The configuration that will be used if you chose "PEM" in the format
-* <4> Path to the server certificate if your LDAP certificate is not signed by a JDK trusted CA
-* <5> Path to the client certificate if you need mutual authentication
-* <6> Path to the client private key if you need mutual authentication. The key format must be PKCS8
+* <4> Path to the X.509 file containing the trusted certificates for verifying the remote endpoint's certificate, required if the LDAP server uses a certificate that's not signed by a JDK trusted CA
+* <5> Path to the X.509 certificate chain, only required for mutual TLS
+* <6> Path to the PKCS#8 private key, only required for mutual TLS
 * <7> The configuration that will be used if you chose "JKS" in the format
 * <8> Path to the trust store containing the server certificate if your LDAP certificate is not signed by a JDK trusted CA. Optional, will use JDK's default if undefined.
 * <9> Password for the trust store
