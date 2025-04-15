@@ -24,10 +24,9 @@ The Gatling no-code generator is the fastest way to discover load testing and ho
 - (optional) [apply acceptance criteria]({{< ref "#apply-acceptance-criteria-optional" >}}),
 - (optional) [choose your settings]({{< ref "#choose-your-settings-optional" >}}).
 
-Once you start your simulation, the load testing data are displayed in real-time. The following guide assists you in writing and launching your first load test. To keep learning about Gatling and load testing, see these helpful resources:
-
-- [Gatling Community](https://community.gatling.io)
-- [Gatling Academy](https://gatling.io/academy/)
+Once you start your simulation, the load testing data are displayed in real-time.
+The following guide assists you in writing and launching your first load test.
+To keep learning about Gatling and load testing, you can join the [Gatling Community](https://community.gatling.io).
 
 ## Access Gatling Enterprise Cloud
 
