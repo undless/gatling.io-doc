@@ -11,7 +11,7 @@ The MQTT protocol is not supported by Gatling JS.
 {{< /alert >}}
 
 {{< alert info >}}
-It only supports MQTT 3.1 and 3.1.1. More recent versions are not currently supported.
+MQTT 3.1, 3.1.1 and 5 are currently supported, but some of the new features introduced in 5 might be missing.
 {{< /alert >}}
 
 ## Prerequisites

@@ -23,10 +23,12 @@ import io.gatling.mqtt.Predef._
 class MqttProtocolSampleScala {
 //#protocol-sample
 val mqttProtocol = mqtt
-  // enable protocol version 3.1 (default: false)
+  // enable protocol version 3.1
   .mqttVersion_3_1
-  // enable protocol version 3.1.1 (default: true)
+  // enable protocol version 3.1.1 (default protocol version)
   .mqttVersion_3_1_1
+  // enable protocol version 5
+  .mqttVersion_5
   // broker address (default: localhost:1883)
   .broker("hostname", 1883)
   // if TLS should be enabled (default: false)
