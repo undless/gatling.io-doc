@@ -10,7 +10,7 @@ The trial offers an opportunity to explore the key features of Gatling Enterpris
 
 Gatling Enterprise offers [3 plan tiers](https://gatling.io/pricing): Basic, Team, and Enterprise.
 
-When you create an account on Gatling Enterprise Cloud to start a product trial, you can benefit from the same plan limits as the Basic plan (except for minutes of testing).
+When you create an account on Gatling Enterprise to start a product trial, you can benefit from the same plan limits as the Basic plan (except for minutes of testing).
 
 ## Product evaluation options
 
@@ -55,7 +55,7 @@ We recommend that you quickly create a straightforward load test simulating the 
 
 - Create a test in 1-min [specifying a website ]({{< ref "/tutorials/quickstart" >}}) URL
 
-- [Use your existing Gatling script]({{< ref "/tutorials/scripting-intro#run-the-simulation-on-gatling-enterprise-cloud" >}})
+- [Use your existing Gatling script]({{< ref "/tutorials/scripting-intro#run-the-simulation-on-gatling-enterprise" >}})
 
 To test the following features:
 

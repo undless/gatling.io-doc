@@ -1,8 +1,8 @@
 ---
 title: Package Configuration
-seotitle: Configure packages in Gatling Enterprise Cloud
-description: Learn how to configure and upload a package to Gatling Enterprise Cloud.
-lead: Configure and upload your package to Gatling Enterprise Cloud.
+seotitle: Configure packages in Gatling Enterprise
+description: Learn how to configure and upload a package to Gatling Enterprise.
+lead: Configure and upload your package to Gatling Enterprise.
 date: 2021-03-10T14:29:36+00:00
 aliases:
 - artifact_conf
@@ -66,9 +66,9 @@ curl -X PUT --upload-file <PACKAGE_LOCAL_PATH> \
 Maven, sbt and Gradle plugins offer commands to automatically deploy and manage your packages and simulations.
 
 {{< alert info >}}
-Check the [Maven]({{< ref "reference/integrations/build-tools/maven-plugin/#deploying-on-gatling-enterprise-cloud" >}}), 
-[Gradle]({{< ref "reference/integrations/build-tools/gradle-plugin/#deploying-on-gatling-enterprise-cloud" >}}), 
-[sbt]({{< ref "reference/integrations/build-tools/sbt-plugin/#deploying-on-gatling-enterprise-cloud" >}}) 
+Check the [Maven]({{< ref "reference/integrations/build-tools/maven-plugin/#deploying-on-gatling-enterprise" >}}), 
+[Gradle]({{< ref "reference/integrations/build-tools/gradle-plugin/#deploying-on-gatling-enterprise" >}}), 
+[sbt]({{< ref "reference/integrations/build-tools/sbt-plugin/#deploying-on-gatling-enterprise" >}}) 
 integrations for more information.
 {{< / alert >}}
 
