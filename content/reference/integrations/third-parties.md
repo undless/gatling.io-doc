@@ -21,7 +21,7 @@ If you run into an issue, please contact their respective owners.
 * [Sftp plugin (Gatling 3.13)](https://github.com/fherbreteau/gatling-sftp) by François Herbreteau
 * [Ftp plugin (Gatling 3.13)](https://github.com/fherbreteau/gatling-ftp) by François Herbreteau
 * [JDBC plugin (Gatling 3.13)](https://github.com/galax-io/gatling-jdbc-plugin) by jigarkhwar
-* [Kafka plugin (Gatling 3.11)](https://github.com/galax-io/gatling-kafka-plugin) by jigarkhwar [Gatling blog starter guide](https://gatling.io/blog/kafka-load-test)
+* [Kafka plugin (Gatling 3.13)](https://github.com/galax-io/gatling-kafka-plugin) by jigarkhwar [Gatling blog starter guide](https://gatling.io/blog/kafka-load-test)
 
 ### Inactive
 

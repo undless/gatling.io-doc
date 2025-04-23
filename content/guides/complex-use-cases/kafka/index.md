@@ -15,7 +15,7 @@ The project is configured to work with sbt. It can also be ported to other build
 
 To use this guide, you will need to meet the following prerequisites:  
 
-- Gatling version 3.11.x
+- Gatling version 3.13.x
 - Java 17
 - Maven or Gradle
 - A Kafka broker (up and running)
@@ -44,7 +44,7 @@ Add this dependency to your .pom file
 <dependency>
  <groupId>org.galaxio</groupId>
  <artifactId>gatling-kafka-plugin_2.13</artifactId>
- <version>0.12.0</version>
+ <version>1.0.0-RC1</version>
  <scope>test</scope>
 </dependency>
 ```
@@ -66,7 +66,7 @@ Add this dependency to your build.gradle file 
 
 ```java
 dependencies {
-    gatling "org.galaxio:gatling-kafka-plugin_2.13:0.12.0"
+    gatling "org.galaxio:gatling-kafka-plugin_2.13:1.0.0-RC1"
 ```
 
 ### Add the import statements
