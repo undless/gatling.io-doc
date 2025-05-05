@@ -44,6 +44,8 @@ Open and closed workload models are antinomical and you can't mix them in the sa
 
 ## Open model
 
+### Core components {#open-model-core}
+
 {{< include-code "open-injection" >}}
 
 The building blocks for open model profile injection are:
@@ -61,7 +63,21 @@ The building blocks for open model profile injection are:
 Rates can be expressed as fractional values.
 {{< /alert >}}
 
+### Stairs {#open-model-stairs}
+
+Quite often, you'll want to build capacity tests where you progressively increase the load with a sequence of ramps and levels.
+While it's entirely possible to build this kind of **open model** injection profile manually from individual blocks,
+Gatling provides a built-in helper named `incrementUsersPerSec`.
+
+{{< include-code "incrementUsersPerSec" >}}
+
+`separatedByRampsLasting` and `startingFrom` are both optional.
+If you don't specify a ramp, the test will jump from one level to another as soon as it is finished.
+If you don't specify the number of starting users the test will start at 0 user per sec and will go to the next step right away.
+
 ## Closed model
+
+### Core components {#closed-model-core}
 
 {{< include-code "closed-injection" >}}
 
@@ -75,25 +91,17 @@ Ramping down the number of concurrent users won't force the existing users to in
 The only way for virtual users to terminate is to complete their scenario.
 {{< /alert >}}
 
-## Meta DSL
+### Stairs {#closed-model-stairs}
 
-It is possible to use elements of Meta DSL to write tests in an easier way.
-If you want to chain levels and ramps to reach the limit of your application (a test sometimes called capacity load testing), you can do it manually using the regular DSL and looping using map and flatMap.
-But there is now an alternative using the meta DSL.
-
-#### `incrementUsersPerSec`
-
-{{< include-code "incrementUsersPerSec" >}}
-
-#### `incrementConcurrentUsers`
+Quite often, you'll want to build capacity tests where you progressively increase the load with a sequence of ramps and levels.
+While it's entirely possible to build this kind of **closed model** injection profile manually from individual blocks,
+Gatling provides a built-in helper named `incrementConcurrentUsers`.
 
 {{< include-code "incrementConcurrentUsers" >}}
 
-`incrementUsersPerSec` is for open workload and `incrementConcurrentUsers` is for closed workload (users/sec vs concurrent users).
-
 `separatedByRampsLasting` and `startingFrom` are both optional.
 If you don't specify a ramp, the test will jump from one level to another as soon as it is finished.
-If you don't specify the number of starting users the test will start at 0 concurrent user or 0 user per sec and will go to the next step right away.
+If you don't specify the number of starting users the test will start at 0 concurrent user and will go to the next step right away.
 
 ## Chaining injection steps
 
