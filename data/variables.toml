@@ -1,5 +1,5 @@
 gatlingVersion = "3.14.1"
-gatlingJsVersion = "3.14.100"
+gatlingJsVersion = "3.14.101"
 selfHostedVersion = "1.25.1"
 
 ciPluginsVersion = "1.18.0"
