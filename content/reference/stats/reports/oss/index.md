@@ -49,22 +49,19 @@ If your scenario contains groups, this panel becomes a tree: each group is a non
 
 The bottom panel shows some details on the failed requests.
 
-### Active users over time
+### Users start rate
 
-{{< img src="charts-users.png" alt="ActiveUsers" >}}
+{{< img src="charts-users-start-rate.png" alt="UserStartRate" >}}
 
-This chart displays the active users during the simulation: total and per scenario.
+This chart displays the number of users started per second over time.
+This would match your injection profile if you're using an open one.
 
-"Active users" is neither "concurrent users" or "users arrival rate".
-It's a kind of mixed metric that serves for both open and closed workload models and that represents "users who were active on the system under load at a given second".
+### Number of concurrent users
 
-It's computed as:
+{{< img src="charts-users-concurrent.png" alt="ConcurrentUsers" >}}
 
-```
-  (number of alive users at previous second)
-+ (number of users that were started during this second)
-- (number of users that were terminated during previous second)
-```
+This chart displays the number of concurrent users over time.
+This would match your injection profile if you're using a closed one.
 
 ### Response time distribution
 

@@ -1,21 +1,19 @@
 ---
 title: Timings
 description: Description of the different metrics reported in Gatling's HTML reports.
-lead: "Learn about all the recorded metrics: active users, response times and counts."
-date: 2021-04-20T18:30:56+02:00
+lead: "Learn about all the recorded metrics: users start rate, concurrent users, response times and counts."
+date: 2021-05-20T18:30:56+02:00
 ---
 
 As Gatling runs and executes requests, several timings are recorded, which make up the basis of all forms of reporting in Gatling: console, HTML reports, etc...
 
-## Active Users
+## Users start rate
 
-At a given second, active users are computed as:
+The number of users started per second. This would match your injection profile if you're using an open one.
 
-```
-  (the number of active users at the previous second)
-+ (the number of users who started during this second)
-- (the number of users who finished during the previous second)
-```
+## Number of concurrent users
+
+This would match your injection profile if you're using a closed one.
 
 ## Requests
 
